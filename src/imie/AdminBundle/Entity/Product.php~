@@ -1,0 +1,38 @@
+<?php
+
+namespace imie\AdminBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+/**
+* @ORM\Entity
+* @ORM\Table(name="product")
+* @author ehryon
+*/
+class Product
+{
+	/*
+	* @ORM\Id
+	* @ORM\Column(type="integer")
+	* @ORM\GeneratedValue(strategy="AUTO")
+	* @var integer
+	*/
+	protected $id;
+	
+	/**
+	* @ORM\Column(type="string", length=100)
+	* @var string
+	*/
+	protected $name;
+	
+	/**
+	* @ORM\Column(type="decimal", scale=2)
+	* @var float
+	*/
+	protected $price;
+
+	/**
+	* @ORM\Column(type="text")
+	* @var string
+	*/
+	protected $description;
+
+}

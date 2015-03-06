@@ -8,29 +8,39 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            
             new AppBundle\AppBundle(),
 
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\AdminBundle\SonataAdminBundle(),
-            new imie\AdminBundle\imieAdminBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
-            new FOS\UserBundle\FOSUserBundle(),
-            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            //new FOS\UserBundle\FOSUserBundle(),
+            //new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             // OR
             // the bundle will NOT extend ``FOSUserBundle``
             //new Sonata\UserBundle\SonataUserBundle(),
+            
+            new FOS\RestBundle\FOSRestBundle(),
+
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+
+            new imie\AdminBundle\imieAdminBundle(),
 
             );
 

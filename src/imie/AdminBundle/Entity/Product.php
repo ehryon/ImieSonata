@@ -2,9 +2,11 @@
 
 namespace imie\AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as JSON;
 /**
 * @ORM\Entity
 * @ORM\Table(name="product")
+* @JSON\ExclusionPolicy("ALL")
 * @author ehryon
 */
 class Product
@@ -19,6 +21,8 @@ class Product
 	
 	/**
 	* @ORM\Column(type="string", length=100)
+    * @JSON\Expose
+    * @JSON\Since("1.0")
 	* @var string
 	*/
 	protected $name;
@@ -31,6 +35,8 @@ class Product
 
 	/**
 	* @ORM\Column(type="text")
+    * @JSON\Expose
+    * @JSON\Since("1.0")
 	* @var string
 	*/
 	protected $description;
@@ -51,7 +57,6 @@ class Product
 
     /**
      * Get name
-     *
      * @return string 
      */
     public function getName()
@@ -103,6 +108,14 @@ class Product
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     *
+     */
+    public function FunctionName($value='')
+    {
+        # code...
     }
 
     /**

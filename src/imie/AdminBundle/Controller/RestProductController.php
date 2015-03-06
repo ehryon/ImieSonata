@@ -16,7 +16,7 @@ class RestProductController extends Controller
 
 		if($product)
 		{
-			$view = $this->view('$product', 200);
+			$view = $this->view($product, 200);
 		}
 		else
 		{

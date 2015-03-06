@@ -23,6 +23,7 @@ class Product
 	* @ORM\Column(type="string", length=100)
     * @JSON\Expose
     * @JSON\Since("1.0")
+    * @JSON\Groups({"api_process"})
 	* @var string
 	*/
 	protected $name;
@@ -31,6 +32,7 @@ class Product
 	* @ORM\Column(type="decimal", scale=2)
     * @JSON\Expose
     * @JSON\Since("1.0")
+    * @JSON\Groups({"api_process"})
 	* @var float
 	*/
 	protected $price;
@@ -39,6 +41,7 @@ class Product
 	* @ORM\Column(type="text")
     * @JSON\Expose
     * @JSON\Since("1.0")
+    * @JSON\Groups({"api_process"})
 	* @var string
 	*/
 	protected $description;
@@ -126,5 +129,15 @@ class Product
     public function __toString()
     {
         return $this->name;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }

@@ -1,0 +1,4 @@
+imie_admin_rest_product:
+    type: rest
+    resource: imie\AdminBundle\Controller\RestProductController
+    name_prefix: imie_api_product_

@@ -29,6 +29,8 @@ class Product
 	
 	/**
 	* @ORM\Column(type="decimal", scale=2)
+    * @JSON\Expose
+    * @JSON\Since("1.0")
 	* @var float
 	*/
 	protected $price;

@@ -40,6 +40,8 @@ class AppKernel extends Kernel
 
             new JMS\SerializerBundle\JMSSerializerBundle(),
 
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+
             new imie\AdminBundle\imieAdminBundle(),
 
             );

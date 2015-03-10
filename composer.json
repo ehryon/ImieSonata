@@ -24,7 +24,8 @@
         "sonata-project/doctrine-orm-admin-bundle": "~2.3",
         "sonata-project/easy-extends-bundle": "~2.1",
         "jms/serializer-bundle": "0.13.*",
-        "friendsofsymfony/rest-bundle": "~1.5"
+        "friendsofsymfony/rest-bundle": "~1.5",
+        "nelmio/api-doc-bundle": "~2.8"
     },
     "scripts": {
         "post-install-cmd": [
